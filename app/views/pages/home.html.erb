@@ -4,10 +4,16 @@
     
     
     </p>
-
-<%= form_tag("/sms/send", method: "post") do %>
- Please find yourself a message and some words to call your own:
-<% end %>
-<%= form_tag("/sms/send", method: "post") do %>
- Please enter number unless your friend's have no phone or just want to be alone today:
-<% end %>
+<form action="/my-handling-form-page" method="post">
+    <div>
+        <label for="msg">Find yourself a message and a place to call your own:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </div>
+    <div>
+        <label for="phone number">Text them home (or cell):</label>
+        <input type="phone" id="phone number" name="user_phone number">
+    </div>
+</form>
+<div class="button">
+  <button type="submit">Send your message</button>
+</div>
