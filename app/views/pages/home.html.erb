@@ -1,11 +1,9 @@
 <h1>CAKE!</h1>
 <p>I want to love you madly. I want to love you now.
     <!-- Find me in app/views/pages/home.html.erb -->
-    
-    
     </p>
-<form action="/my-handling-form-page" method="post">
-    <div>
+<%= form_tag("/sms/send", method: "post") do %>
+  <div>
         <label for="msg">Find yourself a message and a place to call your own:</label>
         <textarea id="msg" name="user_message"></textarea>
     </div>
@@ -13,7 +11,8 @@
         <label for="phone number">Text them home (or cell):</label>
         <input type="phone" id="phone number" name="user_phone number">
     </div>
-</form>
 <div class="button">
   <button type="submit">Send your message</button>
 </div>
+<% end %>
+
